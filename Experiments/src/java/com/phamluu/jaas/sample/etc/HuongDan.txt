@@ -1,0 +1,6 @@
+VM parameter
+-Djava.security.auth.login.config=".\src\etc\sample_jaas.config"
+
+
+username: testUser
+password: testPassword
