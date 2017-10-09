@@ -8,7 +8,7 @@ import java.util.List;
 
 public class CopyOfCombinationGenerator {
 
-    private static final int NUMBER_OF_POSITIONS = 7;
+    private static final int NUMBER_OF_POSITIONS =8;
 
     private static final int PACK_SIZE = 10000000;
 
