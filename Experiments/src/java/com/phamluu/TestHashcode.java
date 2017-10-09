@@ -1,3 +1,4 @@
+package com.phamluu;
 
 public class TestHashcode {
 

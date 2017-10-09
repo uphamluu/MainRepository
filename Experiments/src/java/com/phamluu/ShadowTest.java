@@ -1,3 +1,4 @@
+package com.phamluu;
 public class ShadowTest {
 
     public int x = 0;
