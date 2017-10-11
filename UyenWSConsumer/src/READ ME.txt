@@ -1,3 +1,7 @@
+*******************************************************
+This project is a wen service which running in Tomcat 6
+*******************************************************
+
 1. Server – Published web service – WSDL file.
 The CompA has published a web service along with a WSDL file at URL : http://compA.com/ws/server?wsdl
 
