@@ -1,0 +1,20 @@
+file rat quan trong
+sun-jaxws.xml --> define cac class cua Webservice
+
+**********************************
+doi ten package 
+com.mkyong.ws --> com.uyen.webservices.soa
+
+new ko doi config trong file sun-jaxws.xml se bi loi nhu sau: 
+
+########################################################
+com.sun.xml.ws.transport.http.servlet.WSServletContextListener contextInitialized
+INFORMATION: WSSERVLET12: JAX-WS context listener initializing
+Okt 11, 2017 1:32:41 PM com.sun.xml.ws.transport.http.DeploymentDescriptorParser getImplementorClass
+SCHWERWIEGEND: com.mkyong.ws.HelloWorld
+java.lang.ClassNotFoundException: com.mkyong.ws.HelloWorld
+    at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1680)
+    at org.apache.catalina.loader.WebappClassLoader.loadClass(WebappClassLoader.java:1526)
+########################################################    
+    
+    

@@ -1,0 +1,58 @@
+1. Server – Published web service – WSDL file.
+The CompA has published a web service along with a WSDL file at URL : http://compA.com/ws/server?wsdl
+
+2. Client – Access the published service.
+For CompB, to develop a web service client to access the CompA published web service, they can use wsimport tool to parse CompA’s WSDL file and generate files (JAX-WS portable artifacts) to access CompA’s published service.
+
+Command : wsimport command to parse CompA WSDL file
+-------------------------------------------------------------
+-------------------------------------------------------------
+Vi du:
+C:\>wsimport -keep -verbose http://compA.com/ws/server?wsdl
+parsing WSDL...
+
+generating code...
+com\mkyong\ws\ServerInfo.java
+com\mkyong\ws\ServerInfoImplService.java
+
+-------------------------------------------------------------
+-------------------------------------------------------------
+
+sau khi generating code , code se duoc add vo Client projet de dung
+
+****************************************************************
+vi du cu the
+
+cd C:\DEVELOPMENT
+C:\DEVELOPMENT\Java\jdk1.8.0_121\bin\wsimport -keep -verbose http://localhost:8080/ws/hello?wsdl
+
+OUTPUT in console
+#####################################
+Code wird generiert ...
+
+com\uyen\webservices\soa\GetHelloWorld.java
+com\uyen\webservices\soa\GetHelloWorldResponse.java
+com\uyen\webservices\soa\HelloWorld.java
+com\uyen\webservices\soa\HelloWorldService.java
+com\uyen\webservices\soa\ObjectFactory.java
+com\uyen\webservices\soa\package-info.java
+
+Code wird kompiliert ...
+
+javac -d C:\DEVELOPMENT\. -classpath C:\DEVELOPMENT\Java\jdk1.8.0_121/lib/tools.
+jar;C:\DEVELOPMENT\Java\jdk1.8.0_121/classes -Xbootclasspath/p:C:\DEVELOPMENT\Ja
+va\jdk1.8.0_121\jre\lib\rt.jar;C:\DEVELOPMENT\Java\jdk1.8.0_121\jre\lib\rt.jar C
+:\DEVELOPMENT\.\com\uyen\webservices\soa\GetHelloWorld.java C:\DEVELOPMENT\.\com
+\uyen\webservices\soa\GetHelloWorldResponse.java C:\DEVELOPMENT\.\com\uyen\webse
+rvices\soa\HelloWorld.java C:\DEVELOPMENT\.\com\uyen\webservices\soa\HelloWorldS
+ervice.java C:\DEVELOPMENT\.\com\uyen\webservices\soa\ObjectFactory.java C:\DEVE
+LOPMENT\.\com\uyen\webservices\soa\package-info.java
+
+#####################################
+
+
+
+
+
+
+
