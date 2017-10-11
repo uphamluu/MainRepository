@@ -18,3 +18,9 @@ java.lang.ClassNotFoundException: com.mkyong.ws.HelloWorld
 ########################################################    
     
     
+    
+    
+    
+    add them REst Webservice.
+    
+    Web XML quan trong. define cac webservice se duoc scan  

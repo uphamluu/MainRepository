@@ -7,18 +7,36 @@
   <version>1.0-SNAPSHOT</version>
   <name>webservices Maven Webapp</name>
   <url>http://maven.apache.org</url>
+  
+  
+  <repositories>
+        <repository>
+            <id>JBoss repository</id>
+            <url>https://repository.jboss.org/nexus/content/groups/public-jboss/</url>
+        </repository>
+    </repositories>
+  
+  
+  
   <dependencies>
-    <dependency>
-      <groupId>junit</groupId>
-      <artifactId>junit</artifactId>
-      <version>3.8.1</version>
-      <scope>test</scope>
-    </dependency>
-    <dependency>
-	<groupId>com.sun.xml.ws</groupId>
-	<artifactId>jaxws-rt</artifactId>
-	<version>2.1.4</version>
-</dependency>
+	    <dependency>
+	      <groupId>junit</groupId>
+	      <artifactId>junit</artifactId>
+	      <version>3.8.1</version>
+	      <scope>test</scope>
+	    </dependency>
+        <dependency>
+	       <groupId>com.sun.xml.ws</groupId>
+	       <artifactId>jaxws-rt</artifactId>
+	        <version>2.1.4</version>
+        </dependency>
+        <!-- library for webservice-->
+        <dependency>
+            <groupId>org.jboss.resteasy</groupId>
+            <artifactId>resteasy-jaxrs</artifactId>
+            <version>2.2.1.GA</version>
+        </dependency>
+    
   </dependencies>
   <build>
     <finalName>UyenWebservices</finalName>

@@ -773,7 +773,31 @@ Tools are not allowed to add the non-standard information into the
 standard deployment descriptor.
 -->
 <web-app xmlns:web="http://xmlns.jcp.org/xml/ns/javaee">
-  <display-name>Archetype Created Web Application</display-name>
+  <display-name> Web service Application</display-name>
+<!--   Start of Rest Cofiguration -->
+  <context-param>
+        <param-name>resteasy.scan</param-name>
+        <param-value>true</param-value>
+  </context-param>
+  
+  <listener>
+        <listener-class>
+            org.jboss.resteasy.plugins.server.servlet.ResteasyBootstrap</listener-class>
+    </listener>
+    
+    <servlet>
+        <servlet-name>resteasy-servlet</servlet-name>
+        <servlet-class>
+            org.jboss.resteasy.plugins.server.servlet.HttpServletDispatcher</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>resteasy-servlet</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+    <!--   Start of Rest Cofiguration -->
+  
+  
   <listener>
     <listener-class>
 			com.sun.xml.ws.transport.http.servlet.WSServletContextListener
