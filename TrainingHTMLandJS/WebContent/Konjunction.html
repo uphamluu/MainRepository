@@ -1,0 +1,75 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<head>
+<link rel="stylesheet" type="text/css" href="dict.css">
+
+</head>
+<BODY>
+
+	<script src="DictData.js"></script>
+	<script src="Combination.js"></script>
+	<script src="KonjunctionFunctions.js"></script>
+
+	<h1>Deutsch konjuntion</h1>
+	
+		<table style="width:60%">
+		  <tr>
+			<th style="width:15%">CASE</th>
+			<th style="width:15%">Artikel</th> 
+			<th style="width:25%">Adjektiv</th> 
+			<th>Word</th>
+		  </tr>
+			<tr>
+				<td>
+					<select id = "caseID" onchange="searchWordAndDisplay()">
+					  <option value="Nominativ">Nominativ</option>
+					  <option value="Akkusativ">Akkusativ</option>
+					  <option value="Dativ">Dativ</option>
+					  <option value="Genitive">Genitive</option>
+					</select>
+					
+				</td>
+				<td>
+					<select id="artikelType" onchange="searchWordAndDisplay()">
+					  <option value="Bestimmter">Bestimmter Artikel</option>
+					  <option value="Unbestimmter">Unbestimmter Artikel</option>
+					  <option value="Nullartikel">Nullartikel</option>
+					  
+					</select>
+				
+				</td> 
+
+				<td>
+					<input type="text" id="adjTxt" value="alt" style="text-align: center;">
+				</td>
+
+				<td>
+					<input type="text" id="wordTxt" value="Anschrift" style="text-align: center;">
+				</td>
+			</tr>	
+		  
+		</table>
+		<table style="width:60%" onclick="searchWordAndDisplay()">
+			<tr>
+				<td style="width:100%"> 
+    
+<!-- 					<p id="result"> result </p> -->
+                    <input type="text" id="resultTxt" value="HERE COME REULST !!" style="text-align: center;" readonly="true">
+                    <button type="button" onclick="copyText()">Copy it</button> 
+				</td>
+			</tr>
+		</table>
+		
+		
+		<br>
+<!-- 		<button type="button" onclick="searchWordAndDisplay()">Try it</button> -->
+	
+		<p id="placeholder">Ergebnisse !!!</p>
+	
+
+	
+
+
+</BODY>
+</HTML>

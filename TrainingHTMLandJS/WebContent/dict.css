@@ -1,0 +1,53 @@
+
+table, th, td {
+    border: 1px solid black;    
+}
+th, td {
+    padding: 5px;
+    text-align: center;
+}
+th {
+    text-align: center;
+}
+
+
+
+.Word  {
+	
+	background-color: #FFFFB8;
+}
+
+.separator  {
+	
+	background-color: #F8F8F8;
+}
+
+.superConcept  {
+	
+	background-color: #FFD6CC;
+}
+
+.oddRow  {
+	
+	background-color: #CCFFF5;
+}
+.onOddRow  {	
+	background-color: #B8E6DC;
+}
+
+
+.evenRow  {
+	
+	background-color: #FFD6CC;
+}
+.onEvenRow  {
+	
+	background-color: #E6C1B8;
+}
+
+
+
+
+
+
+
