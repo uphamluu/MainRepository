@@ -1,7 +1,30 @@
-
-
+// Feminine,Maskuline, Neutrum
+// Gespräch 
 //  dictionary is global variable
 var dictionary = [
+{
+        word : 'Gespräch',
+		gender: 'Neutrum',
+        meaning: 'Conversation',
+		example: '.......',
+		superConcept: '.......',
+		subConcept: '.....',
+		word_function: 'Noun', 
+ newField: 'nothing'
+		
+    },
+
+{
+        word : 'Telefonat',
+		gender: 'Neutrum',
+        meaning: 'Telefon gespräch',
+		example: '.......',
+		superConcept: '.......',
+		subConcept: '.....',
+		word_function: 'Noun', 
+ newField: 'nothing'
+		
+    },
 	{
         word : 'E-Mail',
 		gender: 'Feminine',

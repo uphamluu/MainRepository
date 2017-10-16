@@ -5,11 +5,12 @@
 <link rel="stylesheet" type="text/css" href="dict.css">
 
 </head>
-<BODY>
+<BODY onload="listAllWord()">
 
 	<script src="DictData.js"></script>
 	<script src="Combination.js"></script>
 	<script src="KonjunctionFunctions.js"></script>
+    <script src="jquery-1.6.2.min.js"></script>
 
 	<h1>Deutsch konjuntion</h1>
 	
@@ -19,6 +20,7 @@
 			<th style="width:15%">Artikel</th> 
 			<th style="width:25%">Adjektiv</th> 
 			<th>Word</th>
+            <th>List</th>
 		  </tr>
 			<tr>
 				<td>
@@ -40,13 +42,19 @@
 				
 				</td> 
 
-				<td>
-					<input type="text" id="adjTxt" value="alt" style="text-align: center;">
+				<td onclick="searchWordAndDisplay()">
+					<input type="text" id="adjTxt" value="alt" style="text-align: center;" onchange="searchWordAndDisplay()">
 				</td>
 
-				<td>
-					<input type="text" id="wordTxt" value="Anschrift" style="text-align: center;">
+				<td onclick="searchWordAndDisplay()">
+					<input type="text" id="wordTxt" value="Anschrift" style="text-align: center;" onchange="searchWordAndDisplay()">
 				</td>
+    
+                <td rowspan="3" style="overflow: scroll;">
+                    <p id="wordListPHD">List</p>
+                </td>
+    
+    
 			</tr>
             <tr onclick="searchWordAndDisplay()">
                 <td colspan="4"> 
@@ -67,8 +75,7 @@
 		  
 		</table>
 		
-		
-		<br>
+        <br>
 	
 		
 	

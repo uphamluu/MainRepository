@@ -17,14 +17,45 @@ function copyText() {
 	  }
 }
 
+function copyWordFromListToSearchTxt(element) {
+	console.log(element.innerHTML);
+	
+	var wordTxtBx = document.getElementById("wordTxt");
+	wordTxtBx.value= element.innerHTML;
+	
+	
+	
+}
+
+function listAllWord() {
+	$(document).ready(function(){
+		console.log("aaaaa");
+		var placeholderForWordList =  document.getElementById("wordListPHD");
+		emptyDiv(placeholderForWordList);
+		
+		var entryDiv = document.createElement("div");
+		
+		var textToDisplay="aaaa";
+		
+		for (i = 0; i < dictionary.length; i++) { 
+			textToDisplay = dictionary[i].word;
+			createParagraph(entryDiv, "aaaaaaa" , textToDisplay);		
+			placeholderForWordList.appendChild(entryDiv);
+		}
+		
+		
+	});
+	
+}
+
 
 function searchWordAndDisplay() {
 				
 	// find the place to display element
 	var wordTxtBx = document.getElementById("wordTxt");
 	var textToSearch = wordTxtBx.value.trim().toLowerCase();
-	var temp =  document.getElementById("placeholder");
-	emptyDiv(temp);
+	var placeholderForResultList =  document.getElementById("placeholder");
+	emptyDiv(placeholderForResultList);
 	if (textToSearch.length>0){
 			
 		for (i = 0; i < dictionary.length; i++) { 
@@ -33,7 +64,9 @@ function searchWordAndDisplay() {
 			var pos = tobesearched.search(textToSearch);
 				
 			if (pos> -1) {
-				displayEntry(temp, dictionary[i] );
+				// display all matched results
+				displayEntry(placeholderForResultList, dictionary[i] );
+				// display konjunction
 				displayEntry2(dictionary[i])
 						
 			}
@@ -46,6 +79,8 @@ function searchWordAndDisplay() {
 function createParagraph(parentDiv, cssClassName, textToDisplay){
 	var para = document.createElement("p");
 	para.className = cssClassName ;
+	para.setAttribute( "ondblclick", "copyWordFromListToSearchTxt(this)" );
+	
 	var node = document.createTextNode(textToDisplay);
 	para.appendChild(node);	
 	parentDiv.appendChild(para);
@@ -99,14 +134,19 @@ function findGenderIncase (adj, gender) {
 
 
 
-
+/**
+ * 
+ * @param parentElement place holder duoc truyen tu ben ngoai vao.
+ * @param dictEntry
+ * @returns
+ */
 function displayEntry (parentElement, dictEntry) {
 	
 	var entryDiv = document.createElement("div");
 	entryDiv.className="entryDiv oddRow";
 	
 	entryDiv.className="entryDiv evenRow";
-	
+	// set javascript on HTML element
 	entryDiv.setAttribute( "onmouseover", "javascript: changeBGOn(this);" );
 	entryDiv.setAttribute( "onmouseout", "javascript: changeBGOut(this);" );
 	
