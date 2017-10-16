@@ -13,7 +13,7 @@
 
 	<h1>Deutsch konjuntion</h1>
 	
-		<table style="width:60%">
+		<table style="width:80%">
 		  <tr>
 			<th style="width:15%">CASE</th>
 			<th style="width:15%">Artikel</th> 
@@ -26,7 +26,7 @@
 					  <option value="Nominativ">Nominativ</option>
 					  <option value="Akkusativ">Akkusativ</option>
 					  <option value="Dativ">Dativ</option>
-					  <option value="Genitive">Genitive</option>
+					  <option value="Genitiv">Genitiv</option>
 					</select>
 					
 				</td>
@@ -47,25 +47,30 @@
 				<td>
 					<input type="text" id="wordTxt" value="Anschrift" style="text-align: center;">
 				</td>
-			</tr>	
-		  
-		</table>
-		<table style="width:60%" onclick="searchWordAndDisplay()">
-			<tr>
-				<td style="width:100%"> 
-    
-<!-- 					<p id="result"> result </p> -->
+			</tr>
+            <tr onclick="searchWordAndDisplay()">
+                <td colspan="4"> 
                     <input type="text" id="resultTxt" value="HERE COME REULST !!" style="text-align: center;" readonly="true">
                     <button type="button" onclick="copyText()">Copy it</button> 
-				</td>
-			</tr>
+                </td>
+            </tr>
+            
+            <tr >
+                <td colspan="4">
+                    <p id="placeholder">Ergebnisse !!!</p> 
+                </td>
+            </tr>
+   
+        <!--    TODO -->
+        <!--   send web service request with AJAX  -->
+   	
+		  
 		</table>
 		
 		
 		<br>
-<!-- 		<button type="button" onclick="searchWordAndDisplay()">Try it</button> -->
 	
-		<p id="placeholder">Ergebnisse !!!</p>
+		
 	
 
 	

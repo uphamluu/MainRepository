@@ -3,6 +3,18 @@
 //  dictionary is global variable
 var dictionary = [
 	{
+        word : 'E-Mail',
+		gender: 'Feminine',
+        meaning: 'E-Mail',
+		example: '.......',
+		superConcept: '.......',
+		subConcept: '.....',
+		word_function: 'Noun', 
+ newField: 'nothing'
+		
+    },
+	
+	{
         word : 'Auftrag',
 		gender: 'Maskuline',
         meaning: 'assignment, task , duty ',
