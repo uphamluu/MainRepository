@@ -1,7 +1,75 @@
 // Feminine,Maskuline, Neutrum
-// Gespräch 
+//  Feedback , vergleichbare
 //  dictionary is global variable
 var dictionary = [
+{
+        word : 'vergleichbar',
+		gender: 'NONE',
+        meaning: 'comparable',
+		example: '.......',
+		superConcept: '.......',
+		subConcept: '.....',
+		word_function: 'ADJ', 
+ newField: 'nothing'
+		
+    },	
+	
+{
+        word : 'Feedback',
+		gender: 'Neutrum',
+        meaning: 'Feedback',
+		example: '.......',
+		superConcept: '.......',
+		subConcept: '.....',
+		word_function: 'Noun', 
+ newField: 'nothing'
+		
+    },
+	
+{
+        word : 'Satz',
+		gender: 'Maskuline',
+        meaning: 'set, phrase, rate',
+		example: '.......',
+		superConcept: '.......',
+		subConcept: '.....',
+		word_function: 'Noun', 
+ newField: 'nothing'
+		
+    },
+{
+        word : 'CV',
+		gender: 'Neutrum',
+        meaning: 'Curriculum',
+		example: '.......',
+		superConcept: '.......',
+		subConcept: '.....',
+		word_function: 'Noun', 
+ newField: 'nothing'
+		
+    },
+{
+        word : 'Lebenslauf',
+		gender: 'Maskuline',
+        meaning: 'CV',
+		example: '.......',
+		superConcept: '.......',
+		subConcept: '.....',
+		word_function: 'Noun', 
+ newField: 'nothing'
+		
+    },
+{
+        word : 'Honorar',
+		gender: 'Neutrum',
+        meaning: 'fee, duty',
+		example: '.......',
+		superConcept: '.......',
+		subConcept: '.....',
+		word_function: 'Noun', 
+ newField: 'nothing'
+		
+    },
 {
         word : 'Gespräch',
 		gender: 'Neutrum',

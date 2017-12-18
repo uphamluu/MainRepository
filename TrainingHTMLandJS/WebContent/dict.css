@@ -11,10 +11,24 @@ th {
 }
 
 
-
 .Word  {
 	
 	background-color: #FFFFB8;
+}
+
+.Maskuline {
+    
+    background-color: #b3e0ff;
+}
+
+.Feminine {
+    
+    background-color: #ffccff;
+}
+
+.Neutrum {
+    
+    background-color: #e6e6e6;
 }
 
 .separator  {

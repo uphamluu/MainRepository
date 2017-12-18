@@ -17,36 +17,73 @@ function copyText() {
 	  }
 }
 
-function copyWordFromListToSearchTxt(element) {
+function copyWordFromListToSearchTxt(element, targetTxt) {
 	console.log(element.innerHTML);
 	
 	var wordTxtBx = document.getElementById("wordTxt");
 	wordTxtBx.value= element.innerHTML;
 	
-	
+}
+
+function isNoun(dictEntry){
+	return "Noun" == dictEntry.word_function
+		
+}
+
+function isVerb(dictEntry){
+	return "Verb" == dictEntry.word_function
+		
+}
+
+function isADJ(dictEntry){
+	return "ADJ" == dictEntry.word_function
+		
+}
+function listAllWord() {
+	$(document).ready(function(){
+		listAllNouns();
+		listAllADJs();
+		listAllVerbs();
+		
+	});
+
+}
+
+
+function listAllNouns() {
+	listSomething("wordListPHD", isNoun) ;
+}
+
+function listAllADJs() {
+	listSomething("adjListPHD", isADJ) ;
+}
+
+function listAllVerbs() {
+	listSomething("verbListPHD", isVerb) ;
+}
+
+
+
+function listSomething(placeHoldername, nameOfFunction) {
+	var placeholderForWordList = document.getElementById(placeHoldername);
+	emptyDiv(placeholderForWordList);
+
+	var entryDiv = document.createElement("div");
+
+	var textToDisplay;
+
+	for (i = 0; i < dictionary.length; i++) {
+		if (nameOfFunction(dictionary[i])) {
+			textToDisplay = dictionary[i].word;
+			createParagraph(entryDiv, dictionary[i].gender, textToDisplay);
+			placeholderForWordList.appendChild(entryDiv);
+		}
+	}
 	
 }
 
-function listAllWord() {
-	$(document).ready(function(){
-		console.log("aaaaa");
-		var placeholderForWordList =  document.getElementById("wordListPHD");
-		emptyDiv(placeholderForWordList);
-		
-		var entryDiv = document.createElement("div");
-		
-		var textToDisplay="aaaa";
-		
-		for (i = 0; i < dictionary.length; i++) { 
-			textToDisplay = dictionary[i].word;
-			createParagraph(entryDiv, "aaaaaaa" , textToDisplay);		
-			placeholderForWordList.appendChild(entryDiv);
-		}
-		
-		
-	});
-	
-}
+
+
 
 
 function searchWordAndDisplay() {
@@ -59,15 +96,17 @@ function searchWordAndDisplay() {
 	if (textToSearch.length>0){
 			
 		for (i = 0; i < dictionary.length; i++) { 
-			var tobesearched = dictionary[i]['word'].trim().toLowerCase();
+			var tobesearched = dictionary[i].word.trim().toLowerCase();
 			
 			var pos = tobesearched.search(textToSearch);
 				
 			if (pos> -1) {
 				// display all matched results
 				displayEntry(placeholderForResultList, dictionary[i] );
-				// display konjunction
-				displayEntry2(dictionary[i])
+				// display konjunction only for noun
+				if (isNoun(dictionary[i])){
+					displayEntry2(dictionary[i])
+				}
 						
 			}
 		}	

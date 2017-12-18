@@ -1,9 +1,13 @@
-package com.phamluu;
+package com.phamluu.javacollectionExperiments;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
+import java.util.function.Consumer;
+import java.util.stream.Stream;
+
+import com.phamluu.UyenTimerUtil;
 
 public class ArrayListTest {
     private static final int SIZE = 10000000;
@@ -49,6 +53,12 @@ public class ArrayListTest {
         UyenTimerUtil.start(INSERT_TIME);
         aArray.add(newPos, rn.nextInt());
         UyenTimerUtil.stop(INSERT_TIME);
+        
 
     }
+    
+    
+    
+    
+    
 }

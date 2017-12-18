@@ -1,4 +1,4 @@
-package com.phamluu;
+package com.phamluu.javacollectionExperiments;
 
 import java.util.ArrayList;
 import java.util.Collection;
