@@ -22,7 +22,7 @@ import java.util.TreeMap;
  * @author UyenPham
  *
  */
-public class FileDuplcationDetection {
+public class FileDuplicationDetection {
 	//@formatter:off
 	private static final HashSet<String> FOLDER_IGNORE_LIST = new HashSet<String>() {{
 	    add("node_modules");
