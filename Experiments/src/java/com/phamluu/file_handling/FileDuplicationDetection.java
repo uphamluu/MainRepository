@@ -219,8 +219,8 @@ public class FileDuplicationDetection {
 		int i = 0;
 		while (cont) {
 
-			File aaaa = folderList.get(i);
-			sortIntoFileListOrFolderList(aaaa, folderList, fileList);
+			File childrensInAFolder = folderList.get(i);
+			sortIntoFileListOrFolderList(childrensInAFolder, folderList, fileList);
 			i++;
 			cont = shouldContinue(folderList, i);
 		}
@@ -229,20 +229,9 @@ public class FileDuplicationDetection {
 
 	}
 
-	// private static void printFullName(ArrayList<File> fileList, boolean
-	// printDetailFile) {
-	//
-	// if (printDetailFile) {
-	// for (File file : fileList) {
-	// System.out.println(file.getAbsolutePath());
-	// }
-	// }
-	//
-	// }
 
 	private static boolean shouldContinue(ArrayList<File> folderList, int i) {
 		return i < folderList.size();
-		// return false;
 	}
 
 	private static void sortIntoFileListOrFolderList(File fff, ArrayList<File> folderList, ArrayList<File> fileList) {
