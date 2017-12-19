@@ -104,6 +104,11 @@ public class FileDuplcationDetection {
 		return false;
 	}
 
+	/**
+	 * 
+	 * @param startFolderName
+	 * @return
+	 */
 	private static ArrayList<File> retrieveAllFiles(String startFolderName) {
 		File startFolder = new File(startFolderName);
 
