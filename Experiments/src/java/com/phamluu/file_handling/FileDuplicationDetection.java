@@ -3,6 +3,7 @@ package com.phamluu.file_handling;
 import java.io.File;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -125,7 +126,7 @@ public class FileDuplicationDetection {
 	public static void main(String[] args) {
 		System.err.println("Star searching duplication");
 
-		String[] startFolders = {"C:\\DEVELOPMENT", "C:\\DATA"};
+		String[] startFolders = {"C:\\DEVELOPMENT", "C:\\DATA", "E:\\tobemoved"};
 		ArrayList<File> fileList = new ArrayList<>();
 		for (String s: startFolders){
 			fileList.addAll(retrieveAllFiles(s));
@@ -215,8 +216,9 @@ public class FileDuplicationDetection {
 
 		sortIntoFileListOrFolderList(startFolder, folderList, fileList);
 
-		boolean cont = true;
+		boolean cont = !folderList.isEmpty();
 		int i = 0;
+		
 		while (cont) {
 
 			File childrensInAFolder = folderList.get(i);
@@ -235,14 +237,17 @@ public class FileDuplicationDetection {
 	}
 
 	private static void sortIntoFileListOrFolderList(File fff, ArrayList<File> folderList, ArrayList<File> fileList) {
-		for (File file : fff.listFiles()) {
-			if (file.isFile()) {
-				fileList.add(file);
-			} else if (file.isDirectory()) {
-				if (shouldBeIncluded(file.getName())) {
-					folderList.add(file);
-				}
+		if (fff != null && fff.listFiles() != null) {
 
+			for (File file : fff.listFiles()) {
+				if (file.isFile()) {
+					fileList.add(file);
+				} else if (file.isDirectory()) {
+					if (shouldBeIncluded(file.getName())) {
+						folderList.add(file);
+					}
+
+				}
 			}
 		}
 

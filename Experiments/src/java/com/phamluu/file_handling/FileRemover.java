@@ -6,7 +6,7 @@ import java.util.HashSet;
 public class FileRemover {
 	private static final HashSet<String> FILE_LIST = new HashSet<String>() {{
 	    add("C:\\DATA\\Data from  scandisk\\tobemoved\\S-VNX2__-021003WF-EUREN-64BIT_.exe");
-	    add("C:\\DATA\\Data from  scandisk\\tobemoved\\private\\JAX-WS-Integrate-WebApplication-Example.zip");
+	    add("C:\\DATA\\Hays_AG_Datenerfassungsblatt.docx");
 	    add("C:\\DATA\\Data from  scandisk\\tobemoved\\private\\DEVELOPEMENT\\DEVELOPEMENT\\sqldeveloper-4.1.1.19.59-no-jre.zip");
 	    add("C:\\DATA\\Data from  scandisk\\tobemoved\\private\\jaxwsdocumentclient.zip");
 	    

@@ -11,7 +11,7 @@ public class CombinationGenerator {
     // ko the generate den 9 CHU SO 
     // Khi su dung 10 GB --> java.lang.OutOfMemoryError: Java heap space
 
-    private static final int NUMBER_OF_POSITIONS = 3;
+    private static final int NUMBER_OF_POSITIONS = 9;
 
     private static final int PACK_SIZE = 1000000;
 
