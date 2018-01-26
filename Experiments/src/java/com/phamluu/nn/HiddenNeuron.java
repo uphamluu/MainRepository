@@ -1,6 +1,8 @@
 package com.phamluu.nn;
 
-public class HiddenNeuron extends Neuron {
+import java.io.Serializable;
+
+public class HiddenNeuron extends Neuron implements Serializable{
     
     public HiddenNeuron() {
         super();

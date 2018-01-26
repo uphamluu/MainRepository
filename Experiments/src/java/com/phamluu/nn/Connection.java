@@ -1,8 +1,14 @@
 package com.phamluu.nn;
 
-public class Connection {
+import java.io.Serializable;
 
-    private Neuron from;     // Connection goes from. . .
+public class Connection implements Serializable{
+
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 8761754673839887063L;
+	private Neuron from;     // Connection goes from. . .
     private Neuron to;       // To. . .
     private float weight;   // Weight of the connection. . .
 

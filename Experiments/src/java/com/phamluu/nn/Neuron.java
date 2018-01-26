@@ -1,9 +1,10 @@
 
 package com.phamluu.nn;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class Neuron {
+public class Neuron implements Serializable{
 
     protected float output;
     protected ArrayList<Connection> connections; 

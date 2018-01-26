@@ -1,6 +1,8 @@
 package com.phamluu.nn;
 
-public class InputNeuron extends Neuron {
+import java.io.Serializable;
+
+public class InputNeuron extends Neuron implements Serializable{
     public InputNeuron() {
         super();
     }

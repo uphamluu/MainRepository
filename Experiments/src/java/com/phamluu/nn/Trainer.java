@@ -19,7 +19,7 @@ public class Trainer {
 		
 //		nn1.displayNetwork();
 		
-		int count=100000000;
+		int count=10000000;
 		float[][] trainningSet =  prepareTrainningSet(count);
 		for (int i=0; i< trainningSet.length; i++ ){
 			float[] input = Arrays.copyOfRange(trainningSet[i], 0, INPUT_COUNT);
@@ -32,6 +32,18 @@ public class Trainer {
 		System.out.println("input: 0.75 output:"+ nn1.feedForward(new float[]{0.75f}));
 		System.out.println("input: 0.16 output:"+ nn1.feedForward(new float[]{0.16f}));
 		System.out.println("input: 0.01 output:"+ nn1.feedForward(new float[]{0.01f}));
+		
+		NNSaver saver= new NNSaver();
+		System.out.println("NN:");
+		nn1.displayNetwork();
+		saver.saveNetworkToFile(nn1, "trained_nn_2018_01_23");
+		System.out.println("*************************************");
+		System.out.println("loading NN");
+		Network nn2 = saver.loadNetworkFromFile("trained_nn_2018_01_23");
+		nn2.displayNetwork();
+		
+		System.out.println("*************************************");
+		
 
 	}
 	
